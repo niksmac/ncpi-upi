@@ -1,0 +1,28 @@
+{
+  "name": "ncpi-upi",
+  "version": "1.0.0",
+  "description": "NodeJS wrapper for NPCI UPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksmac/ncpi-upi.git"
+  },
+  "keywords": [
+    "ncpi",
+    "upi"
+  ],
+  "author": "https://github.com/niksmac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niksmac/ncpi-upi/issues"
+  },
+  "homepage": "https://github.com/niksmac/ncpi-upi#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "later": "^1.2.0",
+    "request": "^2.72.0"
+  }
+}
