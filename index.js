@@ -11,6 +11,7 @@ var fs = require('fs')
 // Heartbeat Schedule
 var hbsched = later.parse.text('every ' + process.env.HBSCHD);
 var options = {
+  rejectUnauthorized: false,
   url: process.env.APIURL + '/UpiService/upi',
   cert: fs.readFileSync(certFile),
   key: fs.readFileSync(keyFile),
