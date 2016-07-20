@@ -1,15 +1,15 @@
-'use strict';
-require('dotenv').config();
-var later = require('later');
+'use strict'
+require('dotenv').config()
+var later = require('later')
 var fs = require('fs')
-  , path = require('path')
-  , certFile = path.resolve(__dirname, 'ssl/client.crt')
-  , keyFile = path.resolve(__dirname, 'ssl/client.key')
-  , caFile = path.resolve(__dirname, 'ssl/ca.cert.pem')
-  , request = require('request');
+var path = require('path')
+var certFile = path.resolve(__dirname, 'ssl/client.crt')
+var keyFile = path.resolve(__dirname, 'ssl/client.key')
+var caFile = path.resolve(__dirname, 'ssl/ca.cert.pem')
+var request = require('request')
 
 // Heartbeat Schedule
-var hbsched = later.parse.text('every ' + process.env.HBSCHD);
+var hbsched = later.parse.text('every ' + process.env.HBSCHD)
 var options = {
   rejectUnauthorized: false,
   url: process.env.APIURL + '/UpiService/upi',
@@ -19,5 +19,4 @@ var options = {
   ca: fs.readFileSync(caFile)
 }
 
-request.get(options);
-
+request.get(options)
